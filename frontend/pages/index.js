@@ -1,9 +1,13 @@
+import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import Layout from '../components/layout'
+import Script from 'next/script'
 
 export default function Home() {
   return (
+    <Layout>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -14,6 +18,10 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read{' '}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
         </h1>
 
         <p className={styles.description}>
@@ -65,5 +73,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </Layout>
   )
 }
