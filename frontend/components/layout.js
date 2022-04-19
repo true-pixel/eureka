@@ -1,5 +1,10 @@
-import styles from './layout.module.css'
+import Nav from "./nav"
 
-export default function Layout({ children }) {
-  return <div className={styles.container}>{children}</div>
-}
+const Layout = ({ children, categories, seo }) => (
+  <>
+    <Nav categories={categories} />
+    {children}
+  </>
+)
+
+export default Layout
